@@ -1,5 +1,11 @@
 # flowershow
 
+## 0.1.10
+
+### Patch Changes
+
+- Adjust the CLI Installer after migrating Flowershow template to datopian/flowershow.
+
 ## 0.1.9
 
 ### Patch Changes

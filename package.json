@@ -1,9 +1,14 @@
 {
   "name": "flowershow",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Publish your digital garden",
   "bin": {
-    "flowershow": "src/bin/cli.js"
+    "flowershow": "dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.lib.json",
+    "lint": "eslint --fix .",
+    "e2e": "mkdir -p coverage/cli-e2e && e2e/bats-core/bin/bats e2e/test.bats -p --report-formatter pretty -o coverage/cli-e2e --verbose-run"
   },
   "repository": {
     "type": "git",
@@ -11,7 +16,7 @@
     "directory": "packages/cli"
   },
   "files": [
-    "**/*"
+    "./dist"
   ],
   "keywords": [
     "flowershow",
@@ -38,5 +43,13 @@
   "type": "module",
   "engines": {
     "node": ">=16.3.0"
+  },
+  "devDependencies": {
+    "@types/degit": "^2.8.3",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.3.1",
+    "@types/universal-analytics": "^0.4.5",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.3"
   }
 }
