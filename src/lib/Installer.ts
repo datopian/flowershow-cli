@@ -22,7 +22,7 @@ import {
 import { FLOWERSHOW_FOLDER_NAME } from "./const.js";
 
 export default class Installer {
-  templateRepo = "https://github.com/datopian/flowershow-template";
+  templateRepo = "https://github.com/datopian/flowershow";
   context: any;
   targetDir: string;
 
